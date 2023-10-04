@@ -1,0 +1,191 @@
+:root {
+  /**
+   * Go Check https://colorhunt.co/palettes/popular for color palette
+   */
+  --background_color: #FFF2D8;
+  --primary_color: #113946;
+  --secondary_color: #BCA37F;
+  --accent_color: #EAD7BB;
+}
+
+body, html {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: fit-content;
+  min-height: 100%;
+  padding: 0;
+  margin: 0 auto;
+  background-color: black;
+  overflow: auto;
+
+  color: var(--primary_color);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0 0 4px 0;
+  font-size: 1.5em;
+}
+
+a {
+  color: var(--accent_color);
+  text-decoration: none;
+}
+
+p {
+  margin: 0 0 8px 0;
+}
+
+/* Language Rules *******************************************************************************************/
+*[lang] {
+  display: none;
+  flex-direction: column;
+}
+
+p[lang] {
+  margin: 0;
+}
+
+.en *[lang="en"] {
+  display: inherit;
+}
+
+.fr *[lang="fr"] {
+  display: inherit;
+}
+
+/* Class Rules *******************************************************************************************/
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+}
+
+.icon {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-flex;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+.flag {
+  width: auto;
+  height: 18px;
+}
+
+.sub {
+  font-style: italic;
+  font-size: .85em;
+}
+
+/* ID Rules *******************************************************************************************/
+#page {
+  display: flex;
+  flex-direction: column;
+  width: 210mm;
+  height: 297mm;
+  border-radius: 24px;
+  overflow: hidden;
+  margin-bottom: 48px;
+}
+
+/* Header */
+#header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background-color: var(--primary_color);
+  color: var(--accent_color);
+  padding: 24px;
+}
+
+#name {
+  font-size: 3em;
+  color: var(--secondary_color);
+}
+
+#title {
+  font-style: italic;
+  color: var(--accent_color);
+  font-size: 1.5em;
+}
+
+#contacts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+#contacts > * {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+#contacts .icon {
+  margin-top: 2px;
+}
+
+/* Content */
+#content_wrap {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+}
+
+#side {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 100%;
+  background-color: var(--secondary_color);
+  padding: 12px 24px;
+}
+
+#content {
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+  background-color: var(--background_color);
+}
+
+/* Print Rules *******************************************************************************************/
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  body, html {
+    width: fit-content;
+    height: fit-content;
+  }
+
+  #page {
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}

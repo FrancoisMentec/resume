@@ -1,0 +1,100 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>François Mentec Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/nav_bar.css">
+</head>
+<body class="en">
+  <div id="nav_bar">
+    <div id="language_select">
+      <div onclick="set_lang('en')">english</div>
+      <div onclick="set_lang('fr')">french</div>
+    </div>
+    <div id="print" onclick="window.print()">
+      <span class="icon">print</span>
+    </div>
+  </div>
+
+  <div id="page">
+    <div id="header">
+      <div id="name">François <b>Mentec</b></div>
+      <div id="title">
+        <p lang="en">Ph.D. student in artificial intelligence & project manager</p>
+        <p lang="fr">Doctorant en intelligence artificielle & pilote de projet</p>
+      </div>
+      <div id="contacts">
+        <div id="email">
+          <span class="icon">alternate_email</span>
+          <a href="mailto:mentec.francois@gmail.com">mentec.francois@gmail.com</a>
+        </div>
+        <div id="phone">
+          <span class="icon">phone</span>
+          +33 06 89 37 78 77
+        </div>
+        <div id="linkedin">
+          <span class="icon">link</span>
+          <a href="https://www.linkedin.com/in/francoismentec/" target="_blank">linkedin</a>
+        </div>
+        <div id="location">
+          <img class="flag" src="./img/flags/french.png">
+          <div class="col">
+            Rennes, France
+            <div class="sub">
+              <p lang="en">(available remotly)</p>
+              <p lang="fr">(disponible  à distance)</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <div id="content_wrap">
+      <div id="side">
+        <div lang="en">
+          <h1>About me</h1>
+          <p>I fell in love with computer science when I started coding video games in C at the age of 10.</p>
+          <p>I quickly developed a fascination for computer programming and the problem-solving potential it offers.</p>
+          <p>Initially, I pursued studies in software engineering, but during the final year of my diploma program, I decided to diversify my skill set by delving into Artificial Intelligence.</p>
+          <p>This newfound interest led me to pursue a Ph.D. thesis, where I gained valuable experience in scientific research, deep learning, and project management.</p>
+          <p>Equipped with these skills, I am well-prepared to tackle complex challenges using data science, artificial intelligence, and software engineering.</p>
+        </div>
+        <div lang="fr">
+          <h1>Apropos de moi</h1>
+          <p>Je suis tombé amoureux de l'informatique lorsque j'ai commencé à coder des jeux vidéo en C à l'âge de 10 ans.</p>
+          <p>J'ai rapidement développé une fascination pour la programmation informatique et le potentiel de résolution de problèmes qu'elle offre.</p>
+          <p>Au départ, j'ai poursuivi des études en génie logiciel, mais au cours de la dernière année de mon diplôme, j'ai décidé de diversifier mes compétences en me plongeant dans l'intelligence artificielle.</p>
+          <p>Ce nouvel intérêt m'a amené à poursuivre un doctorat, durant lequel j'ai acquis une expérience précieuse dans la recherche scientifique, l'apprentissage automatique et la gestion de projet.</p>
+          <p>Doté de ces compétences, je suis bien préparé pour relever des défis complexes en utilisant la science des données, l'intelligence artificielle et l'ingénierie logicielle.</p>
+        </div>
+      </div>
+      
+      <div id="content">
+
+      </div>
+    </div>
+
+    <script>
+      // Set the correct language
+      const LANGUAGES = ['en', 'fr']
+
+      const url_params = new URLSearchParams(window.location.search)
+      const language = url_params.get('lang') || navigator.language
+
+      for (const lang of LANGUAGES) {
+        if (language.match(new RegExp(`^${lang}(-[A-Z]{2})?$`))) {
+          document.body.className = lang
+          break
+        }
+      }
+
+      function set_lang (lang) {
+        if (!LANGUAGES.includes(lang)) throw new Error(`Unkown language ${lang}`)
+        document.body.className = lang
+        history.pushState({}, '', `?lang=${lang}`)
+      }
+    </script>
+</body>
+</html>
