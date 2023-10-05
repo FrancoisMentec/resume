@@ -148,7 +148,7 @@ p[lang] {
 }
 
 .sub {
-  font-style: italic;
+  font-family: Noto_Sans_Italic;
   font-size: .85em;
 }
 
