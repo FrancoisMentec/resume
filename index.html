@@ -9,8 +9,14 @@
 <body class="en">
   <div id="nav_bar">
     <div id="language_select">
-      <div onclick="set_lang('en')">english</div>
-      <div onclick="set_lang('fr')">french</div>
+      <div set-lang="en">
+        <img class="flag" src="./img/flags/united_kingdom.png">
+        English
+      </div>
+      <div set-lang="fr">
+        <img class="flag" src="./img/flags/french.png">
+        French
+      </div>
     </div>
     <div id="print" onclick="window.print()">
       <span class="icon">print</span>
@@ -34,7 +40,7 @@
           +33 06 89 37 78 77
         </div>
         <div id="linkedin">
-          <span class="icon">link</span>
+          <img src="./img/linkedin_logo.svg">
           <a href="https://www.linkedin.com/in/francoismentec/" target="_blank">linkedin</a>
         </div>
         <div id="location">
@@ -75,26 +81,6 @@
 
       </div>
     </div>
-
-    <script>
-      // Set the correct language
-      const LANGUAGES = ['en', 'fr']
-
-      const url_params = new URLSearchParams(window.location.search)
-      const language = url_params.get('lang') || navigator.language
-
-      for (const lang of LANGUAGES) {
-        if (language.match(new RegExp(`^${lang}(-[A-Z]{2})?$`))) {
-          document.body.className = lang
-          break
-        }
-      }
-
-      function set_lang (lang) {
-        if (!LANGUAGES.includes(lang)) throw new Error(`Unkown language ${lang}`)
-        document.body.className = lang
-        history.pushState({}, '', `?lang=${lang}`)
-      }
-    </script>
+    <script src="./js/language.js"></script>
 </body>
 </html>
