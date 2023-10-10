@@ -72,9 +72,13 @@ body, html {
 }
 
 h1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
   font-family: Noto_Serif;
   margin: 0 0 4px 0;
-  font-size: 1.5em;
+  font-size: 1.75em;
   font-weight: 600;
 }
 
@@ -118,7 +122,7 @@ p[lang] {
 }
 
 .en *[lang="en"] {
-  display: inherit;
+  display: revert;
 }
 
 .fr *[lang="fr"] {
@@ -151,6 +155,14 @@ p[lang] {
   -webkit-font-smoothing: antialiased;
 }
 
+h1 .icon {
+  background-color: var(--primary_color);
+  font-size: 24px;
+  color: var(--background_color);
+  padding: 4px;
+  border-radius: 8px;
+}
+
 .flag {
   width: auto;
   height: 18px;
@@ -178,7 +190,7 @@ p[lang] {
 
 .separator::before, .separator::after {
   content: '';
-  width: 35%;
+  width: calc(50% - 35px);
   height: 1px;
   background-color: var(--primary_color);
   display: inline-flex;
@@ -251,7 +263,7 @@ p[lang] {
 #side {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 26%;
   height: 100%;
   flex-shrink: 0;
   flex-grow: 0;
