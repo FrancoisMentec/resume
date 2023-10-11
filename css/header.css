@@ -1,0 +1,66 @@
+#header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background-color: var(--primary_color);
+  color: var(--accent_color);
+  padding-top: var(--padding);
+  padding-bottom: 8px;
+}
+
+#portrait_wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--padding);
+}
+
+#portrait {
+  display: inline-flex;
+  width: calc(26% - var(--padding) * 2);
+  height: auto;
+  border-radius: 50%;
+  margin-left: var(--padding);
+}
+
+#name_wrap {
+  display: inline-flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-right: 24px;
+}
+
+#name {
+  font-family: Noto_Serif;
+  font-weight: 200;
+  font-size: 3em;
+  color: var(--secondary_color);
+}
+
+#title {
+  font-family: Noto_Serif_Italic;
+  color: var(--accent_color);
+  font-size: 1.5em;
+}
+
+#contacts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 var(--padding);
+}
+
+#contacts > * {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+#contacts .icon {
+  margin-top: 2px;
+}
+
+#contacts .logo {
+  fill: var(--secondary_color);
+}

@@ -38,10 +38,6 @@
   border-bottom: 2px solid transparent;
 }
 
-#language_select > div:hover {
-  background-color: rgba(255,255,255,0.1);
-}
-
 #language_select > div.active {
   border-bottom-color: var(--secondary_color);
   /*border-bottom-color: rgba(0,0,0,.4);*/
@@ -52,7 +48,12 @@
 }
 
 #print {
+  transition: var(--transition);
   cursor: pointer;
+}
+
+#language_select > div:hover, #print:hover {
+  background-color: var(--primary_color_hover);
 }
 
 @media print {
