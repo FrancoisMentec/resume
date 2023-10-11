@@ -5,29 +5,39 @@
   background-color: var(--primary_color);
   color: var(--accent_color);
   padding-top: var(--padding);
-  padding-bottom: 8px;
+  padding-bottom: var(--padding);
 }
 
 #portrait_wrap {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--padding);
+  gap: calc(var(--padding) + 24px); /* 24px is the left padding of the content, so its vertically aligned */
+}
+
+#portrait_border {
+  display: inline-flex;
+  width: calc(26% - var(--padding) * 2);
+  height: fit-content;
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding: 4px;
+  border: 2px solid var(--secondary_color);
+  border-radius: 50%;
+  margin-left: var(--padding);
 }
 
 #portrait {
-  display: inline-flex;
-  width: calc(26% - var(--padding) * 2);
+  width: 100%;
   height: auto;
   border-radius: 50%;
-  margin-left: var(--padding);
 }
 
 #name_wrap {
   display: inline-flex;
   flex-direction: column;
   flex-grow: 1;
-  margin-right: 24px;
+  padding-right: var(--padding);
 }
 
 #name {
@@ -46,8 +56,11 @@
 #contacts {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  padding: 0 var(--padding);
+  /*justify-content: space-between;*/
+  margin-top: 18px;
+  flex-wrap: wrap;
+  row-gap: 8px;
+  column-gap: 36px;
 }
 
 #contacts > * {
