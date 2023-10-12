@@ -106,7 +106,7 @@ b {
 }
 
 p {
-  margin: 0 0 8px 0;
+  margin: 0 0 6px 0;
 }
 
 ul {
@@ -237,6 +237,8 @@ h1 .icon {
   background-color: var(--background_color);
   padding: var(--padding);
   padding-left: 24px; /* For timeline */
+  gap: var(--padding);
+  /*justify-content: space-between;*/
 }
 
 /* Print Rules *******************************************************************************************/

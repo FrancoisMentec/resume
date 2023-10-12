@@ -1,6 +1,5 @@
 .timeline {
   position: relative;
-  margin-bottom: 16px;
 }
 
 .timeline::before {
@@ -12,14 +11,6 @@
   width: 1px;
   height: calc(100% - 8px);
   background-color: var(--primary_color);
-}
-
-.timeline > div {
-  margin-top: 16px;
-}
-
-.timeline > div:first-child {
-  margin-top: 0;
 }
 
 .timeline .date {
