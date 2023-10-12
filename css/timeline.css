@@ -1,6 +1,6 @@
 .timeline {
   position: relative;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .timeline::before {
