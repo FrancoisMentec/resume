@@ -25,6 +25,7 @@
   align-items: center;
   position: relative;
   font-family: Noto_Sans_Italic;
+  color: var(--dark_accent_color);
 }
 
 .timeline .date::before {

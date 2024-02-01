@@ -7,7 +7,8 @@
   --primary_color: #113946;
   --primary_color_hover: #195568; /* Lightened by 10% */
   --secondary_color: #BCA37F;
-  --accent_color: #EAD7BB;
+  --light_accent_color: #EAD7BB;
+  --dark_accent_color: #757575;
 
   --transition: .2s;
   --padding: 16px;
@@ -93,7 +94,7 @@ h2 {
 }
 
 a {
-  color: var(--accent_color);
+  color: var(--light_accent_color);
   text-decoration: none;
 }
 
