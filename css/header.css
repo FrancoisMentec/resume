@@ -3,7 +3,7 @@
   flex-direction: column;
   gap: 4px;
   background-color: var(--primary_color);
-  color: var(--accent_color);
+  color: var(--light_accent_color);
   padding-top: var(--padding);
   padding-bottom: var(--padding);
 }
@@ -49,7 +49,7 @@
 
 #title {
   font-family: Noto_Serif_Italic;
-  color: var(--accent_color);
+  color: var(--light_accent_color);
   font-size: 1.5em;
 }
 

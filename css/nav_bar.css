@@ -14,7 +14,7 @@
   border-radius: 12px;
   height: 42px;
   background-color: var(--primary_color);
-  color: var(--accent_color);
+  color: var(--light_accent_color);
   box-shadow: var(--shadow_4dp);
 }
 
