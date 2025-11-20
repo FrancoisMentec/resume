@@ -98,6 +98,10 @@ a {
   text-decoration: none;
 }
 
+#content a {
+  color: var(--primary_color_hover);
+}
+
 a:hover {
   text-decoration: underline;
 }
